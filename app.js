@@ -4,7 +4,7 @@ const multer = require("multer");
 const AWS = require("aws-sdk");
 const morgan = require("morgan");
 const cors = require("cors");
-const { accessKey, secretKey } = require("../server/src/mysql/config");
+const { accessKey, secretKey } = require("./src/mysql/config");
 
 // config AWS for access S3
 AWS.config.update({
