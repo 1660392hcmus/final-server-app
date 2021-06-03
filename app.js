@@ -54,7 +54,6 @@ const { adminEditMovie } = require("./src/controller/admin/adminEditMovie");
 const { getOneMovie } = require("./src/controller/getOneMovie");
 const App = express();
 App.use(cors());
-App.use(allowCrossDomain)
 //App.use(getLog.getTime);
 //App.use(morgan('short'));
 App.use(
