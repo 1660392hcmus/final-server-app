@@ -54,7 +54,7 @@ const { adminEditMovie } = require("./src/controller/admin/adminEditMovie");
 const { getOneMovie } = require("./src/controller/getOneMovie");
 const App = express();
 App.use(cors());
-app.use(function(req, res, next) {
+App.use(function(req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");
   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
   next();
