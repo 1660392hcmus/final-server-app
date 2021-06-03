@@ -53,7 +53,7 @@ const {
 const { adminEditMovie } = require("./src/controller/admin/adminEditMovie");
 const { getOneMovie } = require("./src/controller/getOneMovie");
 const App = express();
-//App.use(cors());
+App.use(cors());
 
 //App.use(getLog.getTime);
 //App.use(morgan('short'));
