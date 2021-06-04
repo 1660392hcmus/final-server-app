@@ -74,7 +74,8 @@ App.use(
 App.use(cors());
 
 App.use(function(req, res, next) {
-  res.setHeader("Access-Control-Allow-Origin", "*");
+  request.header('Referer');
+  res.setHeader("Access-Control-Allow-Origin", "https://project-final-movie.herokuapp.com");
   res.setHeader(
     "Access-Control-Allow-Methods",
     "GET, POST, OPTIONS, PUT, PATCH, DELETE"
