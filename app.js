@@ -53,6 +53,8 @@ const {
 const { adminEditMovie } = require("./src/controller/admin/adminEditMovie");
 const { getOneMovie } = require("./src/controller/getOneMovie");
 const App = express();
+//App.use(cors());
+
 //App.use(getLog.getTime);
 //App.use(morgan('short'));
 App.use(
@@ -71,11 +73,12 @@ App.use(
 );
 
 // Add headers
-App.use(cors());
+//App.use(cors());
 
 App.use(function(req, res, next) {
-  req.header('Referer');
-  res.setHeader("Access-Control-Allow-Origin", "*");
+  //res.setHeader("Access-Control-Allow-Origin", "*");
+  // res.setHeader("Access-Control-Allow-Origin", 'http://localhost:3000');
+  res.setHeader("Access-Control-Allow-Origin", "http://localhost:3000");
   res.setHeader(
     "Access-Control-Allow-Methods",
     "GET, POST, OPTIONS, PUT, PATCH, DELETE"
