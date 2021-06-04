@@ -1,6 +1,6 @@
-const https = require("https");
+const http = require("http");
 const { App } = require("./app");
-const server = https.createServer(App);
+const server = http.createServer(App);
 let count = 1;
 let port = process.env.PORT || 8080;
 server.on("error", error => console.log(error));
