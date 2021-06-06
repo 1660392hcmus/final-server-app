@@ -105,7 +105,9 @@ App.use(function(req, res, next) {
 //   );
 //   next();
 // });
-
+App.get("/home", (req, res) => {
+  res.send("hello")
+});
 App.post("/user/create/account", userPostCreateAccount);
 App.post("/user/login", userPostLogin);
 App.get("/user/get/all/movie", userGetMovies);
