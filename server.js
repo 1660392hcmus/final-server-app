@@ -5,7 +5,7 @@ let count = 1;
 let port = process.env.PORT || 8080;
 server.on("error", error => console.log(error));
 
-server.listen(port, () => console.log(`Server running on ${port}`));
+server.listen(80, () => console.log(`Server running on ${port}`));
 
 server.on("connection", connect => {
   let time = new Date().getTime();
