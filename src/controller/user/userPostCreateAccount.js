@@ -11,7 +11,7 @@ exports.userPostCreateAccount = (req, res) => {
     if (password.length < 8 || password > 32) {
       vError.ePassword = "Password requied at least 8 character.";
     }
-    if (sdt.match(/[a-z]/i) || sdt.length < 10 || sdt.length > 12) {
+    if (sdt.match(/[a-z]/i) || sdt.length < 10 || sdt.length > 15) {
       vError.ePhone = "PhoneNumber requied 10 character and not contain text";
     }
     if (Object.keys(vError).length) {
